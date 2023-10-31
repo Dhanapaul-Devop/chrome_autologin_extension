@@ -1,21 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
+  //環境
+  var loginModeCheckbox = document.getElementById("loginModeCheckbox");
+  var loginModeSelect = document.getElementById("loginModeSelect");
+  //ログイン画面
   var checkbox = document.getElementById("autoLoginCheckbox");
   var usernameInput = document.getElementById("popupUsername");
   var passwordInput = document.getElementById("popupPassword");
+  //コメニュー画面
   var menuScreenCheckbox = document.getElementById("menuScreenCheckbox");
+  //生徒メニュー画面
   var seitoMenuCheckbox = document.getElementById("seitoMenuCheckbox");
   var firstSelect = document.getElementById("firstSelect");
   var secondSelect = document.getElementById("secondSelect");
+  //生徒検索画面
   var Studentcheckbox = document.getElementById("Studentcheckbox");
   var studentid = document.getElementById("studentid");
+  //生徒詳細画面
   var studentDataCheckBox = document.getElementById("studentDataCheckBox");
   var studentDataSelect = document.getElementById("studentDataSelect");
+  //校舎一覧画面
   var operationSchoolCheckbox = document.getElementById("operationSchoolCheckbox");
   var schoolId = document.getElementById("schoolId");
+  //口授業メニュー画面
   var lessonMenuCheckBox = document.getElementById("lessonMenuCheckBox");
   var lessonMenuSelect = document.getElementById("lessonMenuSelect");
-  var loginModeCheckbox = document.getElementById("loginModeCheckbox");
-  var loginModeSelect = document.getElementById("loginModeSelect");
+
+  
 
   chrome.storage.sync.get([
     "checkboxState",

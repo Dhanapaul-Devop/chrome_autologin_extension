@@ -1,4 +1,5 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    //ログイン画面
     if (request.action === "login") {
         // Check if the login form has not been submitted yet
         if (!$('form[name="loginForm"]').data('submitted')) {
@@ -17,6 +18,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             chrome.runtime.sendMessage({ action: "loginSuccess" });
         }
     } 
+    //コメニュー画面
     else  if (request.action === "menuScreenAndClick") {
         chrome.storage.sync.get(["menuScreenCheckboxState", "firstSelectValue"], function (data) {
             var menuScreenCheckboxState = data.menuScreenCheckboxState;
@@ -30,7 +32,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         } 
         });
     }
-
+    //生徒メニュー画面
     else  if (request.action === "retrieveAndClick") {
         chrome.storage.sync.get(["seitoMenuCheckboxState", "secondSelectValue"], function (data) {
             var seitoMenuCheckboxState = data.seitoMenuCheckboxState;
@@ -44,7 +46,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         } 
         });
     }
-    
+    //口授業メニュー画面
     else  if (request.action === "retrieveAndClickMenu") {
         chrome.storage.sync.get(["lessonMenuCheckBoxState", "lessonMenuSelectValue"], function (data) {
             var lessonMenuCheckBoxState = data.lessonMenuCheckBoxState;
@@ -58,7 +60,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         } 
         });
     }
-
+//生徒検索画面
     else if (request.action === "fillAndSubmit") {
         chrome.storage.sync.get(["StudentcheckboxState", "studentidValue"], function (data) {
             var StudentcheckboxState = data.StudentcheckboxState;
@@ -78,7 +80,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                         } else {
                             console.error("詳細 button not found.");
                         }
-                    }, 1000); // 2000 milliseconds = 2 seconds
+                    }, 1000); 
                 } else {
                     // Log an error if the input element or search button is not found
                     console.error("Input element or search button not found.");
@@ -86,7 +88,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             }
         });
     }
-    
+    //生徒詳細画面
     else if (request.action === "studentDataClick") {
         chrome.storage.sync.get(["studentDataCheckBoxState", "studentDataSelectValue"], function (data) {
             var studentDataCheckBoxState = data.studentDataCheckBoxState;
@@ -118,7 +120,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             }
         });
     }
-    
+    //校舎一覧画面
     else if (request.action === "searchSchool") {
         chrome.storage.sync.get(["operationSchoolCheckboxState", "schoolIdValue"], function (data) {
             var operationSchoolCheckboxState = data.operationSchoolCheckboxState;
