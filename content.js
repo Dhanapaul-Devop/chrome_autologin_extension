@@ -60,7 +60,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         } 
         });
     }
-//生徒検索画面
+    //生徒検索画面
     else if (request.action === "fillAndSubmit") {
         chrome.storage.sync.get(["StudentcheckboxState", "studentidValue"], function (data) {
             var StudentcheckboxState = data.StudentcheckboxState;
