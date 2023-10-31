@@ -9,6 +9,8 @@ chrome.webNavigation.onCompleted.addListener(function (details) {
             handleActions("https://nova-neo.com", details);
         } else if (loginModeCheckboxState && loginModeSelectValue == 1) {
             handleActions("https://localhost:8080", details);
+        } else {
+            handleActions("https://jm-neo.com", details);
         }
     });
 });
@@ -16,6 +18,7 @@ chrome.webNavigation.onCompleted.addListener(function (details) {
 function handleActions(baseURL, details) {
     if (
         details.url.includes(`${baseURL}/StudentSupport/Logout.do`) ||
+        details.url.includes(`${baseURL}/StudentSupport/Login.do`) ||
         (details.url.includes(`${baseURL}/StudentSupport/`) && !loggedInTabs[details.tabId])
     ) {
         chrome.storage.sync.get(["loginId", "loginPw", "checkboxState"], function (data) {

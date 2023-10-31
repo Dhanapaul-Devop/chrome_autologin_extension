@@ -33,7 +33,25 @@
       "https://nova-neo.com/StudentSupport/StudentSearch.do*",
       "https://nova-neo.com/StudentSupport/OperationSchool.do*",
       "https://nova-neo.com/StudentSupport/LessonMenu.do*",
-      "https://nova-neo.com/StudentSupport/StudentData.do*"
+      "https://nova-neo.com/StudentSupport/StudentData.do*",
+      "https://jm-neo.com/StudentSupport/",
+      "https://jm-neo.com/StudentSupport/Login.do",
+      "https://jm-neo.com/StudentSupport/Logout.do",
+      "https://jm-neo.com/StudentSupport/Menu.do",
+      "https://jm-neo.com/StudentSupport/StudentMenu.do*",
+      "https://jm-neo.com/StudentSupport/StudentSearch.do*",
+      "https://jm-neo.com/StudentSupport/OperationSchool.do*",
+      "https://jm-neo.com/StudentSupport/LessonMenu.do*",
+      "https://jm-neo.com/StudentSupport/StudentData.do*",
+      "https://localhost:8080/StudentSupport/",
+      "https://localhost:8080/StudentSupport/Login.do",
+      "https://localhost:8080/StudentSupport/Logout.do",
+      "https://localhost:8080/StudentSupport/Menu.do",
+      "https://localhost:8080/StudentSupport/StudentMenu.do*",
+      "https://localhost:8080/StudentSupport/StudentSearch.do*",
+      "https://localhost:8080/StudentSupport/OperationSchool.do*",
+      "https://localhost:8080/StudentSupport/LessonMenu.do*",
+      "https://localhost:8080/StudentSupport/StudentData.do*"
 
       
     ],
