@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Extension</title>
+    <script src="jquery.min.js"></script>
+    <script src="background.js"></script>
+    <script src="popup.js"></script>
+    <style>
+      .grey {
+        border-radius: 7px;
+      }
+      fieldset {
+        text-align: left;
+        font-size: 15px;
+        border-radius: 8px;
+        padding: 5px;
+        width: 270px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset class="grey shifter" style="margin-bottom: 15px;">
+      <legend><input type="checkbox" id="loginModeCheckbox" class="check2" />環境</legend>
+      <div>
+        <select id="loginModeSelect"> 
+          <option value="1">ローカル</option> 
+          <option value="2">検証</option> 
+          <option value="3">本番</option> 
+        </select> 
+        <label>ボタンをク リックする</label> 
+      </div> 
+    </fieldset> 
+
+    <fieldset class="grey shifter">
+      <legend><input type="checkbox" id="autoLoginCheckbox" />ログイン画面</legend>
+      <div style="margin-top: 4px">
+        <label>ID</label>
+        <input
+          style="margin-left: 8px"
+          type="text"
+          id="popupUsername"
+          name="username"
+        />
+      </div>
+      <div style="margin-top: 4px">
+        <label>PW</label>
+        <input type="password" id="popupPassword"  name="password" />
+      </div>
+    </fieldset>
+    <br />
+    <fieldset class="grey shifter">
+      <legend><input type="checkbox" id="menuScreenCheckbox" class="check2" />コメニュー画面</legend>
+      <div>
+        <select id="firstSelect"> 
+          <option value="1">1</option> 
+          <option value="2">2</option> 
+          <option value="3">3</option> 
+          <option value="4">4</option> 
+          <option value="5">5</option> 
+          <option value="6">6</option> 
+          <option value="7">7</option> 
+          <option value="8">8</option> 
+          <option value="9">9</option> 
+          <option value="10">10</option> 
+          <option value="11">11</option> 
+          <option value="12">12</option>
+        </select> 
+        <label>番目のアイコンをクリックする</label> 
+      </div> 
+    </fieldset> 
+    <br /> 
+    <fieldset class="grey shifter"> 
+      <legend><input type="checkbox" id="seitoMenuCheckbox" class="check2"/>生徒メニュー画面</legend>  
+      <div> 
+        <select id="secondSelect"> 
+          <option value="1">1</option> 
+          <option value="2">2</option> 
+          <option value="3">3</option> 
+          <option value="4">4</option> 
+          <option value="5">5</option> 
+          <option value="6">6</option> 
+          <option value="7">7</option> 
+          <option value="8">8</option> 
+          <option value="9">9</option> 
+          <option value="10">10</option> 
+          <option value="11">11</option> 
+          <option value="12">12</option>
+        </select> 
+        <label>番目のアイコンをクリックする</label> 
+      </div> 
+    </fieldset> 
+    <br /> 
+    <fieldset class="grey shifter">  
+      <legend><input type="checkbox" id="Studentcheckbox" class="check2"/>生徒検索画面</legend> 
+      <div>
+        <label style="display: inline-block">ID</label> 
+        <input
+          type="text"
+          id="studentid"
+          
+          style="display: inline-block"
+        />
+      </div>
+    </fieldset>
+    <br />
+    <fieldset class="grey shifter">
+      <legend><input type="checkbox" id="studentDataCheckBox" class="check2" />生徒詳細画面</legend>
+      <div>
+        <select id="studentDataSelect">
+          <option value="1">ネームプレート印刷(NOVA)</option>
+          <option value="2">皆勤賞印刷(NOVA)</option>
+          <option value="3">パスワード再発行</option>
+          <option value="4">対応状況</option>
+          <option value="5">カルテ</option>
+          <option value="6">請求</option>
+          <option value="7">入金</option>
+          <option value="8">予約</option>
+          <option value="9">うさぎC</option>
+          <option value="10">退会・解約・返金</option>
+          <option value="11">レベコン結果入力</option>
+          <option value="12">NBK_GBSレベコン結果</option>
+          <option value="13">一覧へ戻る</option>
+        </select>
+        <label>ボタンをク リックする</label>
+      </div>
+    </fieldset>
+    <br />
+    <fieldset class="grey shifter">
+      <legend><input type="checkbox" id="operationSchoolCheckbox" class="check2" chec />校舎一覧画面</legend>
+      <div>
+        <label  style="display: inline-block">ID</label>
+        <input
+          type="text"
+          id="schoolId"
+          value="honbu"
+          style="display: inline-block"
+        />
+      </div>
+    </fieldset>
+    <br />
+    <fieldset class="grey shifter">
+      <legend><input type="checkbox" id="lessonMenuCheckBox" class="check2"/>口授業メニュー画面</legend>
+      <div>
+        <select id="lessonMenuSelect">
+          <option value="1">1</option> 
+          <option value="2">2</option> 
+          <option value="3">3</option> 
+          <option value="4">4</option> 
+          <option value="5">5</option> 
+          <option value="6">6</option> 
+          <option value="7">7</option> 
+          <option value="8">8</option> 
+          <option value="9">9</option> 
+          <option value="10">10</option> 
+          <option value="11">11</option> 
+          <option value="12">12</option>
+        </select>
+        <label>番目のアイコンをクリックする</label>
+      </div>
+    </fieldset>
+  </body>
+</html>

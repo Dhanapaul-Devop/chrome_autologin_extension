@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Nova Neo operation A",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "webNavigation",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://nova-neo.com/StudentSupport/",
+      "https://nova-neo.com/StudentSupport/Login.do",
+      "https://nova-neo.com/StudentSupport/Logout.do",
+      "https://nova-neo.com/StudentSupport/Menu.do",
+      "https://nova-neo.com/StudentSupport/StudentMenu.do*",
+      "https://nova-neo.com/StudentSupport/StudentSearch.do*",
+      "https://nova-neo.com/StudentSupport/OperationSchool.do*",
+      "https://nova-neo.com/StudentSupport/LessonMenu.do*",
+      "https://nova-neo.com/StudentSupport/StudentData.do*"
+
+      
+    ],
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
+
