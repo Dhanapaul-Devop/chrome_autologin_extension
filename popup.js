@@ -108,21 +108,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Save data to Chrome storage
     chrome.storage.sync.set(
       {
+        //ログイン画面
         checkboxState: checkboxState,
         loginId: loginId,
         loginPw: loginPw,
+        //コメニュー画面
         menuScreenCheckboxState: menuScreenCheckboxState,
-        seitoMenuCheckboxState: seitoMenuCheckboxState,
         firstSelectValue: firstSelectValue,
+        //生徒メニュー画面
+        seitoMenuCheckboxState: seitoMenuCheckboxState,
         secondSelectValue: secondSelectValue,
+        //生徒検索画面
         StudentcheckboxState: StudentcheckboxState, 
         studentidValue: studentidValue,
+        //生徒詳細画面
         studentDataCheckBoxState: studentDataCheckBoxState,
         studentDataSelectValue: studentDataSelectValue,
+        //校舎一覧画面
         operationSchoolCheckboxState: operationSchoolCheckboxState,
         schoolIdValue: schoolIdValue ,
+        //口授業メニュー画面
         lessonMenuCheckBoxState: lessonMenuCheckBoxState,
         lessonMenuSelectValue: lessonMenuSelectValue,
+        //環境
         loginModeCheckboxState: loginModeCheckboxState,
         loginModeSelectValue: loginModeSelectValue
         
